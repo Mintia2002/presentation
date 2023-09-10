@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>予約サイト</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <body style="background-color:#f0f8ff">
+    <div class="container">
+        <h2>画像投稿予約</h2>
+
+
+        <img class="map" src="map.jpg" alt="地図">
+
+        <div id="locationButtons">
+            <!-- JavaScriptでボタンを動的に生成 -->
+        </div>
+        <p> </p>
+
+        <label for="datePicker">日付選択:</label>
+        <input type="date" id="datePicker" onchange="updateTimes()">
+
+        <p> </p>
+
+        <div id="timeSlots">
+            <!-- JavaScriptで時間スロットを動的に生成 -->
+        </div>
+        <div id="minuteSlots">
+
+        </div>
+        <p> </p>
+
+        <input type="file" id="imageUpload" onchange="previewImage()">
+        <div id="imagePreviewContainer">
+            <label id="previewLabel" style="display: none;">プレビュー画像</label>
+            <img id="imagePreview">
+        </div>
+        
+
+
+        <button id="submit" onclick="completeBooking()">予約</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
